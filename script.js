@@ -48,4 +48,31 @@ const content = `
   </article>
 `;
 
+const newArticle = `
+this is the coolest thing ever for ${everydayPack.name}`;
+
+const newDiv = document.createElement("div");
+newDiv.classList.add("backpack");
+newDiv.setAttribute("id", "everyday");
+newDiv.innerHTML = newArticle;
+
+const navContent = `
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Products</a></li>
+  <li><a href="#">Services</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Contact</a></li>
+`;
+
+const nav = document.createElement("nav");
+const navUL = document.createElement("ul");
+navUL.innerHTML = navContent;
+navUL.classList.add("nav_bar");
+nav.append(navUL);
+
+document.querySelector(".siteheader").append(nav);
+
 main.innerHTML = content;
+
+main.append(newArticle);
+
